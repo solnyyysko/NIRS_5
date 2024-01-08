@@ -1,0 +1,33 @@
+{% extends "inc/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+    <div class="container" style="margin-top: 50px">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="card" style="width: 40rem;">
+                    <img src="{% static '/img/penza.png' %}" class="card-img-top" alt="Афиша">
+                    <div class="card-body">
+                        <h5 class="card-title">Джизус в Пензе // Сольный концерт</h5>
+                        <p class="card-text">13 марта 2023 в клубе Изюм, начало в 20:00</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Танцпол<small style="color: #6c757d; margin-left: 59px">1300 руб.</small></li>
+                        <li class="list-group-item">Meet & Greet<small style="color: #6c757d; margin-left: 25px">2500 руб.</small></li>
+                        <li class="list-group-item">Столы 1 этаж<small style="color: #6c757d; margin-left: 25px">Нет в наличии</small></li>
+                        <li class="list-group-item">Столы 2 этаж<small style="color: #6c757d; margin-left: 25px">2500 руб.</small></li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="{% url 'order' %}" class="btn btn-primary">Оформить заказ</a>
+                    </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+
+
+{% endblock %}

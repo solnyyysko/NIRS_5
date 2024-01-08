@@ -1,0 +1,82 @@
+{% extends "inc/base.html" %}
+
+{% load bootstrap5 %}
+{% load static %}
+
+{% block content %}
+
+    <main class="text-center" class="form-signin w-100 m-auto">
+        <div style="padding: 100px">
+            <form novalidate action="/registration/" method="post">
+                {#            <p>#}
+                {#            </p>#}
+                {#            <h1 class="h3 mb-3 fw-normal">Регистрация</h1>#}
+                {##}
+                {#            <div class="container">#}
+                {#                <div class="row">#}
+                {#                    <div class="col-4"></div>#}
+                {#                    <div class="col-4">#}
+                {#                        <div class="form-floating">#}
+                {#                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">#}
+                {#                            <label for="floatingInput">Username</label>#}
+                {#                        </div>#}
+                {#                        <div class="form-floating" style="margin-top: 5px">#}
+                {#                            <input type="text" class="form-control" id="floatingInput" placeholder="City">#}
+                {#                            <label for="floatingInput">City</label>#}
+                {#                        </div>#}
+                {#                        <div class="form-floating" style="margin-top: 5px">#}
+                {#                            <input type="text" class="form-control" id="floatingInput" placeholder="Phone number">#}
+                {#                            <label for="floatingInput">Phone number</label>#}
+                {#                        </div>#}
+                {#                        <div class="form-floating" style="margin-top: 5px">#}
+                {#                            <input type="email" class="form-control" id="floatingInput" placeholder="Email adress">#}
+                {#                            <label for="floatingInput">Email address</label>#}
+                {#                        </div>#}
+                {#                        <div class="form-floating" style="margin-top: 5px">#}
+                {#                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">#}
+                {#                            <label for="floatingPassword">Password</label>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                    <div class="col-4"></div>#}
+                {#                </div>#}
+                {#            </div>#}
+                {##}
+                {#            <div class="checkbox mb-3">#}
+                {#            </div>#}
+                {#            <div class="container">#}
+                {#                <div class="row">#}
+                {#                    <div class="col-4"></div>#}
+                {#                    <div class="col-4">#}
+                {#                        <button class="w-100 btn btn-lg btn-primary"#}
+                {#                                style="background-color: #DF3848; border-color: #DF3848" type="submit">Зарегестрироваться#}
+                {#                        </button>#}
+                {#                    </div>#}
+                {#                    <div class="col-4"></div>#}
+                {#                    <div style="margin-top: 10px">#}
+                {#                        <a class="nav-link" href="{% url 'login' %}">Войти</a>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {#            </div>#}
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4"></div>
+                        <div class="col-4">
+                            {% bootstrap_form form %}
+                            <button class="w-100 btn btn-lg btn-primary"
+                                    style="background-color: #DF3848; border-color: #DF3848" type="submit">
+                                Зарегестрироваться
+                            </button>
+                        </div>
+                        <div class="col-4"></div>
+                        <div style="margin-top: 10px">
+                            <a class="nav-link" href="{% url 'login' %}">Войти</a>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+{% endblock %}
